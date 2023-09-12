@@ -10,7 +10,8 @@ const livros = [{id:1,
                 {id:2,
                 "Titulo":"Em busca de um pastel",
                 "Data":1990,
-                "Autor":"Jaspion"}]
+                "Autor":"Jaspion"
+            }]
 
 
 app.get('/',(req,res)=>{
@@ -20,6 +21,7 @@ app.get('/',(req,res)=>{
 app.get('/livros',(req,res)=>{
     res.status(200).json(livros)
 })                
+
 
 app.post('/livros',(req,res)=>{
     livros.push(req.body);
